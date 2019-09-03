@@ -8,7 +8,7 @@ import oracle.jdbc.pool.OracleDataSource;
 import oracle.jdbc.OracleConnection;
 import java.sql.DatabaseMetaData;
 
-public class SimpleJDBCTest { 
+public class SimpleJDBCTest {
 
   final static String DB_URL= "jdbc:oracle:thin:/@dbmamende_low";
   final static String DB_USER = "Testdaten";
