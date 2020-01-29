@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<!-- Initialization for data source -->
+	<bean id="dataSource" class="oracle.ucp.jdbc.PoolDataSourceImpl">
+		<property name="connectionFactoryClassName"
+			value="oracle.jdbc.pool.OracleDataSource" />
+		<!-- Connection URL uses a TNS alias -->
+		<property name="URL" value="jdbc:oracle:thin:/@dbma_low" />
+		<property name="user" value="Testdaten" />
+		<property name="password" value="&lt;Your_PASSW0RD_Here&gt;" />
+		<property name="maxPoolSize" value="5" />
+		<property name="initialPoolSize" value="1" />
+	</bean>
+	
+	<!-- Definition for PostleitzahlenJDBCTemplate bean -->
+	<bean id="PostleitzahlenJDBCTemplate" class="autonomous.jdbc.springboot.PostleitzahlenJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+</beans>
