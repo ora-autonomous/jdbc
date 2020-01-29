@@ -1,4 +1,4 @@
-# ADB JDBC Examples
+# ATP JDBC Examples
 ##### by Marcel Amende, Oracle
 
 ## Setup
