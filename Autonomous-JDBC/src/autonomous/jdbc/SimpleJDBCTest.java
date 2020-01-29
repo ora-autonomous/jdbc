@@ -10,7 +10,7 @@ import java.sql.DatabaseMetaData;
 
 public class SimpleJDBCTest {
 
-  final static String DB_URL= "jdbc:oracle:thin:/@dbmamende_low";
+  final static String DB_URL= "jdbc:oracle:thin:/@dbma_low";
   final static String DB_USER = "Testdaten";
   final static String DB_PASSWORD = "<Your_PASSW0RD_Here>";
 
